@@ -46,6 +46,8 @@ else
 fi
 
 # Etapa 3: transcrição SRT com Whisper
+echo $SRT_JA
+
 if [ ! -f "$SRT_JA" ]; then
   echo "[3/6] ✍️ Transcrevendo com Whisper (timestamps reais)..."
   whisper "$AUDIO_FILE" --language Japanese --output_format srt --output_dir "$WORKDIR" --model base
