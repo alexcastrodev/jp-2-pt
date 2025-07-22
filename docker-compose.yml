@@ -1,0 +1,9 @@
+version: '3'
+services:
+  subtitle-gen:
+    build: .
+    volumes:
+      - ./input:/app/input
+      - ./output:/app/output
+    working_dir: /app
+    command: ["input.mp4"]
